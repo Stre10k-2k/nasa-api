@@ -45,10 +45,19 @@ body{
     from{transform: scale(0.5, 0.5); border-radius: 100%;}
     to{transform: scale(1, 1); border-radius: 0px;}
 }
+.title{
+    color: white;
+}
 .output{
     font-size: 30px;
     font-weight: 600;
     color: white;
+}
+.link{
+    color: white;
+}
+.link:hover{
+    cursor: pointer;
 }
 .nasa{
     color: blue;

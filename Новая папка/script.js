@@ -19,9 +19,23 @@ function request() {
             console.log(data)
 
             parent.innerHTML = `
+            <h1 class="title">"${data.title}"</h1>
             <img class="img" src="${data.url}">
             <p class="output">${data.date}</p>
+            <p class="output">${data.copyright}</p>
+            <a class="link">Show explain</a>
             `;
+
+            document.querySelector(".link").onclick = function(){
+                parent.innerHTML = `
+                <h1 class="title">"${data.title}"</h1>
+                <img class="img" src="${data.url}">
+                <p class="output">${data.date}</p>
+                <p class="output">${data.copyright}</p>
+                <a class="link">Show explain</a>
+                <p class="output">${data.explanation}</p>
+                `
+            }
         })
 
         .catch(error => {
